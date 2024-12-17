@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <title>SocketHub</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg my-3 mx-3 rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="icon.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top" class="me-2">
+                
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page3.html">GLOSSARIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page2.html">SISTEMI & RETI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page1.html">INFORMATICA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 rounded p-5" id="content">
+        <div class="container rounded p-3" id="title-container">
+            <h1 class="text-center" id="title">SOCKET HUB</h1>
+        </div>
+        <div class="row">
+            <div class="container-fluid rounded p-3 my-3 col-12 col-sm-6 col-md-4 col-lg-3" id="content-container">
+                <a href="https://informaticabrutta.it/socket-cosa-sono/index.html" >
+                    <h1 class="text-center">scopri di più...</h1>
+                </a>
+                <img src ="https://media.licdn.com/dms/image/v2/C4D12AQGk_ArP-2gpXg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1641715097540?e=2147483647&v=beta&t=OwE631QFesLUjB72VIP88cmWPQcnG7Tb-l0VCm6tjKU" class="img-fluid img-thumbnail">
+                <h2 class="text-center">COS'È UNA SOCKET?</h2>
+                <p class="text-center">
+                    Un socket è un oggetto software che permette l'invio e la ricezione di dati, tra host remoti (tramite una rete) o tra processi locali (Inter-Process Communication).
+                    Più precisamente, il concetto di socket si basa sul modello Input/Output su file di Unix, quindi sulle operazioni di open, read, write e close. L'utilizzo, infatti, 
+                    avviene secondo le stesse modalità, aggiungendo i parametri utili alla comunicazione, quali indirizzi, numeri di porta e protocolli.</p>
+            </div>
+            <div class="container-fluid rounded p-3 my-3 col-12 col-sm-6 col-md-4 col-lg-3" id="content-container">
+                <a href="https://vitolavecchia.altervista.org/che-cose-a-cosa-serve-e-tipi-di-socket-in-informatica/" >
+                    <h1 class="text-center">scopri di più...</h1>
+                </a>
+                <img src="https://images.javatpoint.com/core/images/types-of-sockets-in-java.png" class="img-fluid img-thumbnail">
+                <h2 class="text-center">QUALI TIPOLOGIE CI SONO?</h2>
+                <p class="text-center">
+                    <strong>Stream socket:</strong> si realizza una connessione affidabile (utilizzati dal protocollo TCP): il server si mette in ascolto su una porta (connection socket), 
+                    ad ogni nuova richiesta di collegamento dei client, crea, per ognuno, un “canale virtuale” per la comunicazione tra client e server (data Socket).
+                    <strong>Datagram socket:</strong> basato sul protocollo UDP, non viene creata una connessione affidabile: il server si mette in ascolto su una porta, alla ricezione delle richieste dei client, invia la risposta.
+                </p>
+            </div>
+            <div class="container-fluid rounded p-3 my-3 col-12 col-sm-6 col-md-4 col-lg-3" id="content-container">
+                <a href="https://www.ibm.com/docs/it/i/7.5?topic=programming-how-sockets-work" >
+                    <h1 class="text-center">scopri di più...</h1>
+                </a>
+                <img src="https://www.cs.dartmouth.edu/~campbell/cs60/TCPsockets.jpg" class="img-fluid img-thumbnail h-50" id="img3">
+                <h2 class="text-center">QUALI SONO I PROCESSI DI COMMUNICAZIONE?</h2>
+                <p class="text-center">
+                    In un modello client-to-server orientato alla connessione, 
+                    il socket sul processo del server attende le richieste da un client. 
+                    Per fare ciò, il server stabilisce (esegue il bind) un indirizzo che i client possono utilizzare per trovare il server. 
+                    Quando l'indirizzo viene stabilito, il server attende che i client richiedano un servizio. 
+                    Lo scambio di dati tra client e server avviene quando un client si connette al server tramite un socket. 
+                    Il server esegue la richiesta del client e invia la risposta al client.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="my-3 mx-3  p-5 rounded" id="footer">
+        <div class="container text-center">
+            <p> TARIK MANSOUR 5E</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
