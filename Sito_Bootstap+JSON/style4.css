@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #007bff;
+}
+
+
+.navbar-brand span {
+    font-size: 1.25rem; /* Adjust font size of the title */
+    color: #fff; /* Optional: Set color explicitly */
+}
+
+.navbar{
+    background-color: #c0bebe;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.nav-item {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-size: large;
+    font-style: normal;
+    
+}
+#title {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    font-style: italic;
+}
+#content{
+    background-color: #c0bebe;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#content-container{
+    background-color: #F4866D;
+    position: relative;
+    overflow: hidden;
+
+}
+.text-center{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-size: x-large;
+    font-style: normal;
+}
+#footer{
+    background-color: #c0bebe;
+}
+#footer p{
+    font-size: 40px;
+}
+
+th{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 800;
+    font-size: x-large;
+    font-style: normal;
+}
+td{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-size: large;
+    font-style: normal;
+}
+#content-container h2{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 800;
+    font-size: x-large;
+    font-style: normal;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+#content-container p{
+    opacity: 1;
+    font-weight: 400;
+    transition: opacity 0.2s ease-in-out;
+}
+#content-container:hover h1{
+    opacity:1;
+    font-weight: bolder;
+}
+#content-container:hover h2{
+    opacity:0;
+}
+#content-container:hover p{
+    opacity:0;
+}
+#title-container{
+    background-color: #F4866D;
+    position: relative;
+    overflow: hidden;
+}
+table {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    border-spacing: 0;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: separate;
+  }  
+  
+  thead tr {
+    background-color: #F4866D; /* Header background color */
+  }
+  th, td {
+    padding: 12px 15px;
+    border: 2px solid #333;
+  }
+  
+  tbody tr{
+    background-color: #c0bebe;
+  }
+  

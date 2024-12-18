@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <title>SocketHub</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg my-3 mx-3 rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="icon.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top" class="me-2">
+                
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="page3.html">GLOSSARIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page2.html">SISTEMI & RETI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page1.html">INFORMATICA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Glossario -->
+        <table class="table-bordered table-hover  my-5 rounded shadow"  id="data-table">
+            <thead>
+              <tr>
+                <th>TERMINE</th>
+                <th>DEFINIZIONE</th>
+                <th>COLLEGAMENTO</th>
+              </tr>
+            </thead>
+            <tbody>
+             
+            </tbody>
+        </table>
+
+    <!-- Footer -->
+    <footer class="my-3 mx-3  p-5 rounded" id="footer">
+        <div class="container text-center">
+            <p> TARIK MANSOUR 5E</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Implementazione di dati JSON sul glossario-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        fetch('data.json') //legge dal file data.json il contenuto
+            .then(response => response.json()) // converte la risposta in formato JSON in un oggetto JavaScript utilizzabile
+            .then(data => {  // esegue il seguente blocco di codice una volta che i dati sono stati caricati e convertiti
+                const tableBody = document.querySelector('#data-table tbody'); //dichiaro il corpo della tabella
+                const collegLinks = []; //dichiaro l'array vuoto dei link
+                data.forEach(item => { //foreach per ogni elemento 
+
+                    const row = document.createElement('tr'); //creo riga tabella
+
+                    const TermineCell = document.createElement('td'); //creo colonna termine
+                    TermineCell.textContent = item.TERMINE; //inserisco il valore del campo "TERMINE"
+                    row.appendChild(TermineCell); //aggiungo TERMINE alla riga
+                    
+                    //stesso processo per la colonna definizione
+                    const DefCell = document.createElement('td'); 
+                    DefCell.textContent = item.DEFINIZIONE;
+                    row.appendChild(DefCell);
+
+                    
+                    const CollegCell = document.createElement('td');
+                    const link = document.createElement('a'); //creo link
+                    link.href = item.COLLEGAMENTO; //ricavo la sorgente del link dal campo "COLLEGAMENTO"
+                    CollegCell.appendChild(link); //l'aggiungo a collegamento
+                    row.appendChild(CollegCell); //aggiungo COLLEGAMENTO alla riga
+                    collegLinks.push(link); //inserisco dentro all'array i link creati
+                    
+                    tableBody.appendChild(row); //aggiungo le righe complete al corpo della tabella
+                });
+                //inserisco una descrizione per ogni link
+                collegLinks[0].textContent = "Cosa sono le socket? (In dettaglio)";
+                collegLinks[1].textContent = "Quali sono i processi di communicazione?";
+                collegLinks[2].textContent = "Quali sono i processi di communicazione?";
+                collegLinks[3].textContent = "Livello trasporto";
+                collegLinks[4].textContent = "Livello trasporto";
+            })
+        });
+
+    </script>
+</body>
+</html>

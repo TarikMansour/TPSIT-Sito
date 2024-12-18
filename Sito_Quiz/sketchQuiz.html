@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AI Quiz</title>
+</head>
+<body>
+    <h1>Verifica sul AI</h1>
+
+    <!-- schermata di benvenuto -->
+    <div id="welcomeScreen" class="container">
+        <h2>Benvenuto</h2>
+        <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Inserire nome" required>
+        </div>
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Inserire email" required>
+        </div>
+        <button id="startButton" class="btn">Iniziare</button>
+    </div>
+
+    <!-- contenuto quiz -->
+    <div id="quizContainer" class="container hidden">
+        <div class="timer">
+            Tempo rimanente: <span id="timer">03:00</span>
+        </div>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. Chi è considerato il padre dell'AI?</p>
+                <input type="radio" name="q1" value="Alan Turing" required> Alan Turing<br>
+                <input type="radio" name="q1" value="John McCarthy"> John McCarthy<br>
+                <input type="radio" name="q1" value="Elon Musk"> Elon Musk
+            </div>
+
+            <div class="question">
+                <p>2. Cosa significa AI?</p>
+                <input type="radio" name="q2" value="Automated Interaction" required> Automated Interaction<br>
+                <input type="radio" name="q2" value="Artificial Intelligence"> Artificial Intelligence<br>
+                <input type="radio" name="q2" value="Automated Information"> Automated Information
+            </div>
+
+            <div class="question">
+                <p>3. Su cosa è basato il machine learning?</p>
+                <input type="radio" name="q3" value="Rules and Logic" required> Rules and Logic<br>
+                <input type="radio" name="q3" value="Statistical Models"> Statistical Models<br>
+                <input type="radio" name="q3" value="Hardcoded Programs"> Hardcoded Programs
+            </div>
+
+            <div class="question">
+                <p>4. Quale linguaggio di programmazione viene utilizzato per programmare AI?</p>
+                <input type="radio" name="q4" value="JavaScript" required> JavaScript<br>
+                <input type="radio" name="q4" value="Python"> Python<br>
+                <input type="radio" name="q4" value="C++"> C++
+            </div>
+
+            <button type="submit" class="btn">Submit Quiz</button>
+        </form>
+
+        <div id="results" class="results hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

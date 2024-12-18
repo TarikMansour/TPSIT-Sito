@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #007bff;
+}
+
+
+.navbar-brand span {
+    font-size: 1.25rem; /* Adjust font size of the title */
+    color: #fff; /* Optional: Set color explicitly */
+}
+
+.navbar{
+    background-color: #c0bebe;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.nav-item {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-size: large;
+    font-style: normal;
+    
+}
+#title {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    font-style: italic;
+}
+#content{
+    background-color: #c0bebe;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;  
+    max-width: 100%;  
+    min-width: 80%;
+}
+#content-container{
+    background-color: #F4866D;
+    position: relative;
+    aspect-ratio: auto;
+}
+.text-center{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-size: x-large;
+    font-style: normal;
+}
+#footer{
+    background-color: #c0bebe;
+}
+#footer p{
+    font-size: 40px;
+}
+#content-container:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    -webkit-box-shadow: 0px 4px 22px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px 22px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 22px 0px rgba(0,0,0,0.2);
+}
+#content-container h1{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 800;
+    font-size: x-large;
+    font-style: normal;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    text-align: center;
+}
+#content-container h2{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 800;
+    font-size: x-large;
+    font-style: normal;
+    text-align: center;
+   
+}
+#content-container p{
+    font-weight: 400;
+}
+#content-container:hover h1{
+    opacity:1;
+    font-weight: bolder;
+}
+#content-container:hover h2{
+    opacity:0;
+}
+#content-container:hover p{
+    opacity:0;
+}
+#title-container{
+    background-color: #F4866D;
+    position: relative;
+    overflow: hidden;
+}
+#content-container img{
+    opacity: 0;
+    display:none;
+    object-fit: contain;
+    width:100%;
+    height:95%;
+    transition: opacity 0.2s ease-in-out;
+}
+#content-container:hover img{
+    opacity: 1;
+    display:flex;
+}
+#img3{
+    height: auto;
+}
+
+
+  
